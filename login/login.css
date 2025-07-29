@@ -178,10 +178,86 @@ body {
 }
 
 .item label {
-    font-size: 0.9rem; /* Tamaño de fuente ajustado para etiquetas */
-    margin-bottom: 0.5rem; /* Espaciado entre etiqueta y elemento */
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
 }
 
 .item div {
-    margin-top: 0.5rem; /* Espaciado entre elementos dentro de la fila */
+    margin-top: 0.5rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .content {
+    width: 70%;
+    padding: 1rem;
+  }
+  .btn-group {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+  .content {
+    width: 98%;
+    min-width: 0;
+    padding: 0.5rem;
+    box-shadow: none;
+  }
+  .title {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .item {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 1rem;
+  }
+  .item i {
+    width: 2rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+    font-size: 1.2rem;
+  }
+  .item label {
+    margin-right: 0;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+  }
+  .item input,
+  .item select,
+  .item textarea {
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    min-width: 0;
+  }
+  .select {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+  .select div {
+    margin: 0.3rem 0;
+  }
+  .btn-group {
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .btn-group .btn,
+  .btn-group .btn-back {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+  .signup-link {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
 }

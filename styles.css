@@ -326,3 +326,158 @@ footer {
 #browserInfo, #currentDate, #lastModified {
   margin-bottom: 0.5rem;
 }
+
+/* ...existing code... */
+
+/* --- HAMBURGER MENU --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin: 1.5rem;
+  z-index: 100;
+}
+
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: #333;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 700px) {
+  .hand .image-container.right {
+    display: none !important;
+  }
+  .hand .text-container {
+    opacity: 1 !important;
+    position: static;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-container {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  .text-container {
+    position: static;
+    transform: none;
+    left: 0;
+    top: 0;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .text-container-p {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hand {
+    height: auto;
+    min-height: 60vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .noticias {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 2% 5rem 2%;
+  }
+  .noticia {
+    width: 95%;
+    margin: 0 auto 2rem auto;
+  }
+  .noticia img, .noticia iframe {
+    width: 100%;
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    position: relative;
+  }
+  .nav-main {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 70vw;
+    height: 100vh;
+    background: burlywood;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    z-index: 99;
+    padding-top: 5rem;
+  }
+  .nav-main.active {
+    right: 0;
+  }
+  .nav li {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .logo {
+    margin: 1rem;
+    font-size: 2rem;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .footer-column {
+    min-width: 100%;
+    padding: 0.5rem 0;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .date-container {
+    font-size: 1rem;
+  }
+  .titulo {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+  .text-container-h {
+    font-size: 1.2rem;
+  }
+  .text-container-p {
+    font-size: 1rem;
+  }
+  .btn, .btn-noticia, .noticias-btn-verTodos {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  .footer-column h3 {
+    font-size: 1rem;
+  }
+}
+
+/* ...existing code... */

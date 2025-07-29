@@ -51,3 +51,11 @@ window.onload = function() {
   
       document.getElementById('browserInfo').textContent = `Navegador: ${browserName} ${fullVersion}`;
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.getElementById('hamburger');
+  const navMain = document.querySelector('.nav-main');
+  hamburger.addEventListener('click', function() {
+    navMain.classList.toggle('active');
+  });
+});
